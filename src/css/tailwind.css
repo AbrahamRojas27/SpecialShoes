@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Card{
+    @apply w-48 h-64  shadow-md rounded-xl shadow-gray-400 flex-none overflow-hidden lg:hover:shadow-emerald-300 lg:w-64 lg:h-80 lg:overflow-hidden transition-colors
+}

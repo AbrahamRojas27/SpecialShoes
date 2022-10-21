@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body class="dark:bg-gray-900">
+   <header>
+        <nav id="navbar-destok" class="hidden lg:flex w-full h-14 bg-slate-100 p-4 justify-between fixed top-0 z-10 dark:bg-gray-700">
+            <div class="h-auto w-auto">
+                <p class="text-xl font-bold text-emerald-500">SpecialShoes</p>
+            </div>
+            <div class="space-x-4">
+                <a href="#home" class="hover:text-emerald-500 font-bold dark:text-white">Inicio</a>
+                <a href="#recomendados" class="hover:text-emerald-500 font-bold dark:text-white">Destacados</a>
+                <a href="#destacados" class="hover:text-emerald-500 font-bold dark:text-white">Recomendados</a>
+            </div>
+            <div class="flex space-x-8">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path class="dark:fill-current dark:text-white" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </a>
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path class="dark:fill-current dark:text-white" d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                      </svg>
+                </a>
+                <button id="toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                        <path class="dark:fill-current dark:text-white" d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                      </svg>
+                </button>
+            </div>
+        </nav>
+        <nav id="navbar-mobile" class="w-full h-16 fixed bottom-0  bg-slate-200 z-10 shadow-md flex items-center justify-center space-x-16 lg:hidden dark:bg-gray-700"> 
+            <div>
+                <a href="#home">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                        <path class="dark:fill-current dark:text-white" fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                        <path class="dark:fill-current dark:text-white" fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                      </svg>
+                </a>
+            </div>
+            <div>
+                <a href="#recomendados">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path class="dark:fill-current dark:text-white" d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                      </svg>
+                </a>
+            </div>
+            <div>
+                <a href="#destacados">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path class="dark:fill-current dark:text-white" d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                </a>
+            </div>
+            <div>
+                <button id="toggleMb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                        <path class="dark:fill-current dark:text-white" d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                      </svg>
+                </button>
+            </div>
+        </nav>
+   </header>
+
+   <main>
+    <section id="home">
+        <div class="w-full h-3/4">
+            <div class="w-full h-full flex p-10 bg-heroImg bg-center bg-cover lg:bg-hero-desktop">
+                <div class="w-full space-y-96 flex flex-col items-center lg:bg-black lg:bg-opacity-30 lg:items-start lg:space-y-24">
+                    <input class="w-64 h-12 rounded-full shadow-sm shadow-gray-900 p-4 lg:hidden" type="search" placeholder="Search">
+                    <p class="text-white text-3xl font-bold hidden lg:block">Lorem ipsum dolor sit amet <br> consectetur adipisicing elit. Vitae, harum.</p>
+                    <button class="bg-emerald-500 text-gray-100 w-32 h-12 rounded-xl text-lg font-bold shadow-gray-600 shadow-md lg:w-40 lg:h-16 lg:text-xl lg:hover:bg-slate-500 lg:hover:text-white lg:hover:shadow-emerald-400 transition-colors">Explora</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recomendadas" class="p-2">
+        <h2 class="text-3xl text-center font-bold text-emerald-500 mt-6">Recomendados</h2>
+
+       <div class="w-auto h-72 items-center flex mt-4 overflow-x-auto overscroll-x-contains space-x-4 lg:h-96">
+
+        <div class="Card">
+            <div class="w-full h-3/5 bg-nike1 bg-cover bg-center rounded-t-xl"></div>
+            <div class="w-full h-2/5 bg-gray-200 p-2 dark:bg-gray-400">
+                <p class="text-xl  text-slate-700 font-bold dark:text-white">Lorem ipsum</p>
+                <p class="text-sm text-gray-500 dark:text-gray-800">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="w-full h-3/5 bg-adidas1 bg-cover bg-center rounded-t-xl"></div>
+            <div class="w-full h-2/5 bg-gray-200 dark:bg-gray-400 p-2 ">
+                <p class="text-xl text-slate-700 font-bold dark:text-white">Lorem ipsum</p>
+                <p class="text-sm text-gray-500 dark:text-gray-800">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="w-full h-3/5 bg-vans1 bg-cover bg-center rounded-t-xl"></div>
+            <div class="w-full h-2/5 bg-gray-200 dark:bg-gray-400 p-2 ">
+                <p class="text-xl text-slate-700 font-bold dark:text-white">Lorem ipsum</p>
+                <p class="text-sm text-gray-500 dark:text-gray-800">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="w-full h-3/5 bg-adidas2 bg-cover bg-center rounded-t-xl"></div>
+            <div class="w-full h-2/5 bg-gray-200 dark:bg-gray-400 p-2 ">
+                <p class="text-xl text-slate-700 font-bold dark:text-white">Lorem ipsum</p>
+                <p class="text-sm text-gray-500 dark:text-gray-800">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="w-full h-3/5 bg-nike2 bg-cover bg-center rounded-t-xl"></div>
+            <div class="w-full h-2/5 bg-gray-200 dark:bg-gray-400 p-2 ">
+                <p class="text-xl text-slate-700 font-bold dark:text-white">Lorem ipsum</p>
+                <p class="text-sm text-gray-500 dark:text-gray-800">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+        <div class="Card">
+            <div class="w-full h-3/5 bg-nike8 bg-cover bg-center rounded-t-xl"></div>
+            <div class="w-full h-2/5 bg-gray-200 dark:bg-gray-400 p-2 ">
+                <p class="text-xl text-slate-700 font-bold dark:text-white">Lorem ipsum</p>
+                <p class="text-sm text-gray-500 dark:text-gray-800">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+        </div>
+       
+
+       </div>
+    </section>
+
+    <section id="destacados" class="w-full h-full p-2">
+        <h2 class="text-3xl text-center font-bold text-emerald-500">Destacados</h2>
+
+        <div class="w-full h-auto space-y-4">
+
+            <div class="lg:flex lg:space-x-4">
+                <div class="w-full h-96 lg:h-72 bg-slate-400 bg-adidas1 bg-center bg-cover rounded-xl mt-4 overflow-hidden relative shadow-md shadow-gray-500">
+                    <div class="w-24 bg-white bg-opacity-40 p-4 rounded-l-xl absolute bottom-0 right-0">
+                        <img class="w-full" src="./img/Logo_Adidas.png" alt="">
+                    </div>
+                </div>
+
+                <div class="w-full h-96 lg:h-72 bg-slate-400 bg-nike8 bg-center bg-cover rounded-xl mt-4 overflow-hidden relative shadow-md shadow-gray-500">
+                    <div class="w-24 bg-white bg-opacity-40 p-4 rounded-l-xl absolute bottom-0 right-0">
+                        <img class="w-full" src="./img/nike-negro.png" alt="">
+                    </div>
+                </div>
+                <div class="w-full h-96 lg:h-72 bg-slate-400 bg-vans4 bg-center bg-cover rounded-xl mt-4 overflow-hidden relative shadow-md shadow-gray-500">
+                    <div class="w-24 bg-white bg-opacity-40 p-4 rounded-l-xl absolute bottom-0 right-0">
+                        <img class="w-full" src="./img/Vans-logo.svg.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full lg:space-x-4 lg:flex">
+                <div class="lg:w-1/2 lg:h-1/2">
+                    <div class="w-full h-72 lg:h-96 bg-slate-400 bg-nike2 bg-center bg-cover rounded-xl mt-4 overflow-hidden relative shadow-md shadow-gray-500">
+                        <div class="w-24 bg-white bg-opacity-40 p-4 rounded-l-xl absolute bottom-0 right-0">
+                            <img class="w-full" src="./img/nike-negro.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2 lg:h-96">
+                    
+                        <div class="w-full h-72 lg:h-1/2 bg-slate-400 bg-nike8 bg-center bg-cover rounded-xl mt-4 overflow-hidden relative shadow-md shadow-gray-500">
+                            <div class="w-24 bg-white bg-opacity-40 p-4 rounded-l-xl absolute bottom-0 right-0">
+                                <img class="w-full" src="./img/nike-negro.png" alt="">
+                            </div>
+                        </div>
+    
+                        <div class="w-full h-72 lg:h-1/2 bg-slate-400 bg-vans1 bg-center bg-cover rounded-xl mt-4 overflow-hidden relative shadow-md shadow-gray-500">
+                            <div class="w-24 bg-white bg-opacity-40 p-4 rounded-l-xl absolute bottom-0 right-0">
+                                <img class="w-full" src="./img/Vans-logo.svg.png" alt="">
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>         
+    </section>
+
+    <section class="w-full h-full p-2 mt-4" id="faqs">
+        <div class="w-full h-full">
+            <h3 class="text-3xl text-emerald-500 font-bold text-center">FAQS</h3>
+        </div>
+
+        <div class="space-y-4">
+        <div>
+            <p class="text-xl text-slate-700 font-semibold dark:text-white">Lorem</p>
+            <p class="text-slate-500 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea incidunt similique excepturi nulla illum soluta quisquam, vitae debitis?</p>
+        </div>
+        <div>
+            <p class="text-xl text-slate-700 font-semibold dark:text-white">Lorem</p>
+            <p class="text-slate-500 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea incidunt similique excepturi nulla illum soluta quisquam, vitae debitis? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex hic dicta aliquam eius?.</p>
+        </div>
+        <div>
+            <p class="text-xl text-slate-700 font-semibold dark:text-white">Lorem</p>
+            <p class="text-slate-500 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea incidunt similique excepturi nulla illum soluta quisquam, vitae debitis? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam vitae sed fuga sapiente mollitia id eius sit perferendis nobis! Numquam voluptatibus optio expedita culpa ea nihil nostrum illum ut placeat.</p>
+        </div>
+        </div>
+    </section>
+   </main>
+
+   <footer class="w-full h-auto bg-slate-200 dark:bg-gray-700">
+        <div class="p-4 space-y-4">
+            <h3 class="text-xl text-slate-700 font-bold dark:text-white">Acerca de</h3>
+            <p class="text-gray-500 dark:text-gray-200">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-gray-500 dark:text-gray-200">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p class="text-gray-500 dark:text-gray-200">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+   </footer>
+
+   <script>
+        const htmlElement = document.querySelector("html")
+        const toggleButton = document.querySelector("#toggle")
+        const toggleButtonMb = document.querySelector("#toggleMb")
+
+        const toggleDarkMode = () => {
+            htmlElement.classList.contains("dark")?
+            htmlElement.classList.remove("dark"):
+            htmlElement.classList.add("dark")
+        }
+
+        toggleButton.addEventListener("click", () => toggleDarkMode())
+        toggleButtonMb.addEventListener("click", () => toggleDarkMode())
+
+        
+   </script>
+</body>
+</html>
